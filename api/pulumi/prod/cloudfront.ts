@@ -85,8 +85,10 @@ class Cloudfront {
                 }
             },
             viewerCertificate: {
-                cloudfrontDefaultCertificate: true
-            }
+                acmCertificateArn: "arn:aws:acm:us-east-1:286136663550:certificate/55b86be4-bcb6-4619-90f5-2977bef5c262", // Arn of the certificate
+                sslSupportMethod: "sni-only"
+            },
+            aliases: ["cmsapi.banyudu.com"]
         });
     }
 }
